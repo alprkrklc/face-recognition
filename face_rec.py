@@ -98,8 +98,7 @@ class Recognizator:
             # Crates or gets the face instance.
             face = Face(UNKNOWN_FACE_LABEL, encoding)
             if matches[best_match_index]:
-                face = known_faces[best_match_index]
-                face.encoding = encoding
+                face.name = known_faces[best_match_index].name
 
             faces.append(face)
         

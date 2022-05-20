@@ -118,12 +118,12 @@ class Recognizator:
         '''
         for (top, right, bottom, left), face in zip(face_locations, faces):
             # Draws a box around the face.
-            cv2.rectangle(image, (left-20, top-20), (right+20, bottom+20), (255, 0, 0), 2)
+            cv2.rectangle(image, (left - 20, top - 20), (right + 20, bottom + 20), (255, 0, 0), 2)
 
             # Draws a label with the name of the face.
-            cv2.rectangle(image, (left-20, bottom -15), (right+20, bottom+20), (255, 0, 0), cv2.FILLED)
+            cv2.rectangle(image, (left - 20, bottom - 15), (right + 20, bottom + 20), (255, 0, 0), cv2.FILLED)
             font = cv2.FONT_HERSHEY_DUPLEX
-            cv2.putText(image, face.name, (left -20, bottom + 15), font, 1.0, (255, 255, 255), 2)
+            cv2.putText(image, face.name, (left - 20, bottom + 15), font, 1.0, (255, 255, 255), 2)
 
         # Converts cv2 image to color array.
         color_array = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
